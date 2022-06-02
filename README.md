@@ -409,7 +409,7 @@ Click Next
 When adding a policy filter it by typing Secret.
 
 You will see something like SecretManagerAccess with a content like:
-
+```json
 {
     "Version": "2012-10-17",
     "Statement": {
@@ -422,13 +422,13 @@ You will see something like SecretManagerAccess with a content like:
         "Resource": "*"
     }
 }
-
+```
 For tests you can use that, but it is better if you create an specific policy just for the secret you just created, you an go to the secret and 
 get the ARN which will look like this: arn:aws:secretsmanager:us-east-1:999999999999:secret:SnowflakeCredentials-MtznPD
 
 For example:
 
-
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -440,7 +440,7 @@ For example:
         }
     ]
 }
-
+```
 After adding the policy click Next and then select CreateRole
 
 
