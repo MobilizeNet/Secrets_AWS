@@ -456,7 +456,18 @@ In this case we just assume that in your environment there will be variables lik
 AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and 
 AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY) 
 
-already set. You can use the code in the repo running `gradle :readsecret --args "SnowflakeCredentials"
+already set. 
+You can use the code in the repo 
+
+Setup the test code:
+```
+git clone https://github.com/MobilizeNet/Secrets_AWS.git
+```
+
+Running the example:
+```
+gradle :readsecret --args="SnowflakeCredentials"
+```
 
 2. By leverage the EC2 integration
 
@@ -464,7 +475,22 @@ In this case you can associate a role with an EC2 instance.
 
 You can create an EC2 instance with Amazon Linux
 
+Setting up the instance:
+```
 sudo amazon-linux-extras install java-openjdk11
 sudo yum install git
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install gradle
+```
+
+Setup the test code:
+```
+git clone https://github.com/MobilizeNet/Secrets_AWS.git
+```
+
+Running the example:
+```
+gradle :readsecretEC2 --args="SnowflakeCredentials"
+```
+> NOTE: if you have problems with the java version use sdk install java
