@@ -41,3 +41,12 @@ task readsecret(type: JavaExec) {
     }
 }
 
+
+task readsecretEC2(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.example.secrets.GetSecretValueEC2'
+    if(project.hasProperty('myargs')){
+        args(myargs.split(','))
+    }
+}
+

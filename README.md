@@ -465,7 +465,6 @@ In this case you can associate a role with an EC2 instance.
 You can create an EC2 instance with Amazon Linux
 
 sudo amazon-linux-extras install java-openjdk11
-sudo yum install java-1.8.0-openjdk
 sudo yum install git
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
